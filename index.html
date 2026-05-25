@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>SAGE — Strategic Adversarial Generative Engine</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;700;800&family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+
+<div id="loading">
+  <div class="l-logo">S<em>A</em>GE</div>
+  <div class="l-bar-track"><div class="l-bar" id="lbar"></div></div>
+  <div class="l-status" id="lstatus">Initializing boardroom...</div>
+</div>
+
+<canvas id="c"></canvas>
+
+<div id="tov"></div>
+
+<div id="prog"></div>
+
+<nav id="nav">
+  <div class="nav-logo">S<b>AGE</b></div>
+  <ul class="nav-links">
+    <li><a href="#agents">Agents</a></li>
+    <li><a href="#arch">Architecture</a></li>
+    <li><a href="#bench">Benchmarks</a></li>
+    <li><a href="#compare">Compare</a></li>
+  </ul>
+  <button class="nav-btn">Get Access</button>
+</nav>
+
+<div id="hero">
+  <div class="h-badge"><span class="h-badge-dot"></span>AMD MI300X · 192GB HBM3 · Nash Equilibrium Engine</div>
+  <h1 class="h1">The Boardroom That<br><span class="grd">Hardens Your Code.</span></h1>
+  <p class="h-sub">Four adversarial agents. One Nash Equilibrium. Zero weak code.</p>
+  <div class="h-ctas">
+    <button class="btn-p">Enter SAGE-PRO</button>
+    <button class="btn-s">Try SAGE-FREE</button>
+  </div>
+  <div class="h-scroll">
+    <div class="h-scroll-dot"></div>
+    <div class="h-scroll-txt">Scroll to explore</div>
+  </div>
+</div>
+
+<div id="cine">
+  <div id="cine-content">
+    <div class="cn-num cn-el" id="cn-num">AGENT 01</div>
+    <div class="cn-name cn-el" id="cn-name">ARCHITECT</div>
+    <div class="cn-role cn-el" id="cn-role">SYSTEM DESIGN</div>
+    <div class="cn-desc cn-el" id="cn-desc">Decomposes requirements into dependency graphs. Plans every subsystem before the first keystroke. Owns the interface contract.</div>
+    <div class="cn-bar cn-el"><div class="cn-bar-fill" id="cn-bar-fill"></div></div>
+  </div>
+</div>
+
+<div id="cine-dots">
+  <div class="cdot" id="d0"></div>
+  <div class="cdot" id="d1"></div>
+  <div class="cdot" id="d2"></div>
+  <div class="cdot" id="d3"></div>
+</div>
+
+<button id="cine-skip">Skip ↓</button>
+
+<div id="driver"></div>
+
+<div id="sections">
+  <div class="sw">
+    <div class="sec" id="agents">
+      <h2 class="sh reveal">Four Minds.<br/>One Mission.</h2>
+      <p class="ssub reveal">Each agent operates with bounded rationality, adversarial incentives, and a singular mandate. No consensus. No compromise. Only code that survives.</p>
+      <div class="ag-grid">
+        <div class="ag-card reveal">
+          <div class="ag-num">Agent 01</div>
+          <div class="ag-ico">⬡</div>
+          <div class="ag-name">Architect</div>
+          <div class="ag-role">System Design</div>
+          <div class="ag-desc">Decomposes requirements into dependency graphs. Plans every subsystem before the first keystroke. Owns the interface contract.</div>
+          <div class="ag-chip">7-node LangGraph</div>
+        </div>
+        <div class="ag-card reveal">
+          <div class="ag-num">Agent 02</div>
+          <div class="ag-ico">◈</div>
+          <div class="ag-name">Implementer</div>
+          <div class="ag-role">Code Generation</div>
+          <div class="ag-desc">Parallel synthesis across modules with zero context drift. Generates idiomatic, test-ready code from the Architect's blueprint.</div>
+          <div class="ag-chip">Co-resident memory lock</div>
+        </div>
+        <div class="ag-card reveal">
+          <div class="ag-num">Agent 03</div>
+          <div class="ag-ico">⬢</div>
+          <div class="ag-name">Synthesizer</div>
+          <div class="ag-role">Integration Engine</div>
+          <div class="ag-desc">Merges parallel agent outputs into coherent, tested, deployment-ready artifacts. Resolves conflicts via Nash Equilibrium arbitration.</div>
+          <div class="ag-chip">Nash Equilibrium Crucible</div>
+        </div>
+        <div class="ag-card reveal">
+          <div class="ag-num">Agent 04</div>
+          <div class="ag-ico">◆</div>
+          <div class="ag-name">Red-Team</div>
+          <div class="ag-role">Adversarial Probe</div>
+          <div class="ag-desc">Attacks the Synthesizer's output systematically. Surfaces edge cases, security flaws, and logic errors before they reach production.</div>
+          <div class="ag-chip">Adversarial incentives</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sdiv"></div>
+  <div class="sw">
+    <div class="sec" id="arch">
+      <div class="eyebrow reveal">Under the Hood</div>
+      <h2 class="sh reveal">7-Node Reasoning<br/>Engine.</h2>
+      <p class="ssub reveal">A directed acyclic LangGraph pipeline where each node applies a bounded reasoning strategy. The graph converges only when all adversarial agents reach Nash Equilibrium.</p>
+      <div class="arch reveal">
+        <div class="arch-title">Reasoning pipeline · AODE → Nash</div>
+        <div class="arch-flow">
+          <div class="arch-node"><div class="arch-node-ico">▣</div><div class="arch-node-n">Intake</div><div class="arch-node-s">Spec parse</div></div>
+          <div class="arch-arr">→</div>
+          <div class="arch-node"><div class="arch-node-ico">⬡</div><div class="arch-node-n">Architect</div><div class="arch-node-s">Graph design</div></div>
+          <div class="arch-arr">→</div>
+          <div class="arch-node"><div class="arch-node-ico">◈</div><div class="arch-node-n">Implement</div><div class="arch-node-s">Parallel gen</div></div>
+          <div class="arch-arr">→</div>
+          <div class="arch-node"><div class="arch-node-ico">⬢</div><div class="arch-node-n">Synthesize</div><div class="arch-node-s">Merge outputs</div></div>
+          <div class="arch-arr">→</div>
+          <div class="arch-node"><div class="arch-node-ico">◆</div><div class="arch-node-n">Red-Team</div><div class="arch-node-s">Attack surface</div></div>
+          <div class="arch-arr">→</div>
+          <div class="arch-node"><div class="arch-node-ico">⊜</div><div class="arch-node-n">Nash</div><div class="arch-node-s">Equilibrium</div></div>
+          <div class="arch-arr">→</div>
+          <div class="arch-node"><div class="arch-node-ico">✓</div><div class="arch-node-n">Output</div><div class="arch-node-s">Hardened code</div></div>
+        </div>
+        <div class="arch-hw">
+          <div class="arch-hw-ico">◆</div>
+          <div class="arch-hw-text">
+            <div class="arch-hw-label">Hardware Target</div>
+            <div class="arch-hw-val">AMD Instinct MI300X</div>
+            <div class="arch-hw-sub">192GB HBM3 unified memory · co-resident model lock · 5.3 TB/s bandwidth</div>
+          </div>
+          <div class="arch-hw-chips">
+            <div class="chip">192GB HBM3</div>
+            <div class="chip">5.3 TB/s BW</div>
+            <div class="chip">ROCm 6.x</div>
+            <div class="chip">vLLM backend</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sdiv"></div>
+  <div class="sw">
+    <div class="sec" id="bench">
+      <div class="eyebrow reveal">Performance</div>
+      <h2 class="sh reveal">Numbers That<br/>Don't Negotiate.</h2>
+      <p class="ssub reveal">Evaluated on standardized coding benchmarks under controlled conditions. SAGE-PRO's adversarial architecture consistently outperforms single-agent baselines.</p>
+      <div class="bench-grid">
+        <div class="bench-c reveal"><div class="bench-n">+12.4%</div><div class="bench-l">HumanEval+<br/>pass@1 improvement</div><div class="bench-tag">vs. GPT-4o baseline</div></div>
+        <div class="bench-c reveal"><div class="bench-n">+8.2%</div><div class="bench-l">SWE-Bench-Lite<br/>resolved rate</div><div class="bench-tag">Production issues</div></div>
+        <div class="bench-c reveal"><div class="bench-n">4×</div><div class="bench-l">Parallel agent<br/>reasoning threads</div><div class="bench-tag">Nash convergence</div></div>
+        <div class="bench-c reveal"><div class="bench-n">192<span style="font-size:32px">GB</span></div><div class="bench-l">HBM3 unified<br/>memory pool</div><div class="bench-tag">MI300X target</div></div>
+        <div class="bench-c reveal"><div class="bench-n">7</div><div class="bench-l">LangGraph reasoning<br/>nodes per query</div><div class="bench-tag">Directed acyclic</div></div>
+        <div class="bench-c reveal"><div class="bench-n">0</div><div class="bench-l">Single points of<br/>failure in pipeline</div><div class="bench-tag">Adversarial design</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="sdiv"></div>
+  <div class="sw">
+    <div class="sec" id="compare">
+      <div class="eyebrow reveal">Plans</div>
+      <h2 class="sh reveal">Choose Your<br/>Tier.</h2>
+      <p class="ssub reveal">SAGE scales from open-source experimentation to enterprise-grade adversarial coding infrastructure on AMD MI300X.</p>
+      <div class="cmp-grid">
+        <div class="cmp-c pro reveal">
+          <div class="cmp-badge pro">SAGE-PRO</div>
+          <div class="cmp-title">Enterprise</div>
+          <div class="cmp-sub">Full adversarial pipeline on AMD MI300X. Nash Equilibrium convergence. Co-resident memory locking. Maximum code hardening.</div>
+          <ul class="cmp-feats">
+            <li class="cmp-feat"><span class="cmp-check">✓</span>4-agent adversarial pipeline</li>
+            <li class="cmp-feat"><span class="cmp-check">✓</span>7-node LangGraph reasoning engine</li>
+            <li class="cmp-feat"><span class="cmp-check">✓</span>AMD MI300X · 192GB HBM3 target</li>
+            <li class="cmp-feat"><span class="cmp-check">✓</span>Nash Equilibrium Crucible</li>
+            <li class="cmp-feat"><span class="cmp-check">✓</span>Co-resident memory locking</li>
+            <li class="cmp-feat"><span class="cmp-check">✓</span>Red-Team adversarial probing</li>
+            <li class="cmp-feat"><span class="cmp-check">✓</span>+12.4% HumanEval+ · +8.2% SWE-Bench</li>
+            <li class="cmp-feat"><span class="cmp-check">✓</span>Enterprise SLA &amp; dedicated infra</li>
+          </ul>
+          <button class="cmp-feat-btn pro">Request Access</button>
+        </div>
+        <div class="cmp-c free reveal">
+          <div class="cmp-badge free">SAGE-FREE</div>
+          <div class="cmp-title">Open-Source</div>
+          <div class="cmp-sub">Lightweight AODE pipeline for consumer hardware. Run the adversarial architecture on any GPU with under 16GB VRAM.</div>
+          <ul class="cmp-feats">
+            <li class="cmp-feat"><span class="cmp-check">✓</span>Lightweight AODE pipeline</li>
+            <li class="cmp-feat"><span class="cmp-check">✓</span>Open-source model weights</li>
+            <li class="cmp-feat"><span class="cmp-check">✓</span>&lt;16GB VRAM consumer GPU</li>
+            <li class="cmp-feat"><span class="cmp-check">✓</span>2-agent simplified architecture</li>
+            <li class="cmp-feat"><span class="cmp-check">✓</span>Community support</li>
+            <li class="cmp-feat"><span class="cmp-check dim">✗</span>Nash Equilibrium Crucible</li>
+            <li class="cmp-feat"><span class="cmp-check dim">✗</span>Co-resident memory locking</li>
+            <li class="cmp-feat"><span class="cmp-check dim">✗</span>Enterprise SLA</li>
+          </ul>
+          <button class="cmp-feat-btn free">Download Free</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="cta-sec">
+    <div class="cta-glow"></div>
+    <h2 class="cta-h reveal">The boardroom is<br/>waiting for your code.</h2>
+    <p class="cta-sub reveal">Join the teams using adversarial AI to ship code that doesn't break under pressure.</p>
+    <div class="cta-btns reveal">
+      <button class="btn-p" style="padding:16px 36px;font-size:15px">Enter SAGE-PRO</button>
+      <button class="btn-s" style="padding:16px 36px;font-size:15px">Try SAGE-FREE</button>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="f-logo">S<b>AGE</b></div>
+  <div class="f-links">
+    <a href="#">Documentation</a>
+    <a href="#">Research</a>
+    <a href="#">GitHub</a>
+    <a href="#">Discord</a>
+    <a href="#">Privacy</a>
+  </div>
+  <div class="f-copy">© 2025 SAGE · Strategic Adversarial Generative Engine</div>
+</footer>
+
+<script src="config.js"></script>
+<script src="scene.js"></script>
+<script src="cinematic.js"></script>
+</body>
+</html>
