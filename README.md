@@ -35,24 +35,24 @@ Built completely from scratch using vanilla JavaScript and Three.js without rely
 
 ## 🌌 Real-Time 3D Environment
 - Three.js powered WebGL rendering
-- Futuristic boardroom-inspired environment
-- Animated beacon lighting systems
-- Layered cinematic depth
+- Futuristic cinematic environment
+- Animated lighting systems
+- Layered depth composition
 
-## 🤖 Agent Reveal Sequences
-- Four AI-inspired agent characters
-- Individual spotlight transitions
-- Interactive focus sequences
-- Cinematic entrance animations
+## 🤖 Interactive Presentation Experience
+- Cinematic reveal animations
+- Dynamic transitions
+- Scroll-triggered interactions
+- Immersive storytelling flow
 
-## ⚡ Interactive UI Systems
-- Animated loading sequences
-- Overlay transitions
-- Responsive multi-section layouts
-- Motion-based visual storytelling
+## ⚡ Custom Frontend Architecture
+- Modular JavaScript structure
+- Real-time scene orchestration
+- Lightweight rendering pipeline
+- Fully handcrafted animation systems
 
 ## 📱 Responsive Design
-- Adaptive layout handling
+- Adaptive layouts
 - Optimized scaling
 - Smooth rendering across screen sizes
 
@@ -76,16 +76,12 @@ Built completely from scratch using vanilla JavaScript and Three.js without rely
 ```plaintext
 SAGE--Frontend/
 │
+├── README.md
+├── cinematic.js
+├── config.js
 ├── index.html
-├── css/
-│   └── style.css
-├── js/
-│   └── script.js
-├── assets/
-│   ├── models/
-│   ├── textures/
-│   └── images/
-└── README.md
+├── scene.js
+└── style.css
 ```
 
 ---
